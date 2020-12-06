@@ -19,21 +19,23 @@ for i = 1:n
 
 end
 y = round(y*L/2/pi)*2*pi/L;
-figure(1)
-subplot(3,1,1)
-plot(X(1,:));
-ylabel('theta')
-xlabel('Time in secs')
-title('State Model from The simulator')
-subplot(3,1,2)
-plot(y);
-ylabel('y')
-xlabel('Time in secs')
-title('Measurement Model from The simulator')
-subplot(3,1,3)
-plot(X(2,:));
-ylabel('Omega')
-xlabel('Time in secs')
-title('State Model from The simulator')
+% figure(4)
+% hold on
+% subplot(3,1,1)
+% plot(X(1,:));
+% ylabel('theta')
+% xlabel('Time (seconds)')
+% title('State (Theta) from The simulator')
+% subplot(3,1,2)
+% plot(X(2,:));
+% ylabel('Omega')
+% xlabel('Time(seconds)')
+% title('State (Omega) from The simulator')
+% subplot(3,1,3)
+% 
+% plot(y);
+% ylabel('y')
+% xlabel('Time(seconds)')
+% title('Measurement (Y) from The simulator')
 end
 
