@@ -10,7 +10,7 @@ G = 50;
 T = 20*10^-3;
 Tf = 25*10^-3;
 L = 512;
-q = 50;
+q = 100;
 x1 = [0;0];
 x1_0 = [1.5;0];
 p1_0 = [(2*pi)^2/12 0;0 0];
@@ -47,7 +47,7 @@ xlabel('Time in seconds')
 title(' y  ')
 
 %stationary Kalman filter
-[X2]=Stationary_Kalman(y,u,G,T,Ts,L,x1_0,p1_0,q);
+[X2]=Stationary_Kalman(y,u,G,Tf,Ts,L,x1_0,p1_0,q);
 figure(3)
 subplot(3,1,1)
 plot ((0:Ts:D1),X2(1,:),'r');
