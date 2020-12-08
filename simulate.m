@@ -15,7 +15,7 @@
 %Copyright ©2020 Rudra Patel & Kojo Anyinam-Boateng
 %}
 
-function [y, X] = simulates(u, G, T, Ts, L, x1)
+function [y, X] = simulate(u, G, T, Ts, L, x1)
 
     x = x1;
     A = [0 1; 0 -1 / T];
