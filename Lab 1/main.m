@@ -44,9 +44,10 @@ X = sqrt(-2 * log(1 - P0)) * chol(C, 'lower') * [cos(theta); sin(theta)] + m * o
 x = chol(C, 'lower') * randn(length(C), nr) + m * ones(1, nr);
 
 figure('Name', 'Joint Distributions');
-plot(x(1, :), x(2, :), '*');
+dist = plot(x(1, :), x(2, :), '*', 'LineWidth', 1);
 hold on
-plot(X(1, :), X(2, :));
+confE = plot(X(1, :), X(2, :), 'LineWidth', 2);
+legend([dist confE], 'Distribution', 'Confidence Ellipse', 'FontSize', 12);
 title("Joint Distribution with 91% Confidence Ellipse");
 
 % Making sure the figure window appears in fullscreen.
