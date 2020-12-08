@@ -1,15 +1,24 @@
-function u = inputvoltage(D,A,Delta,Ts)
+%{
+%File: inputvoltage.m
+%Project: Autonomous Vehicles Lab | Kalman Filter
+%File Created: Monday, 30th November 2020 2:03:42 PM
+%Authors: Rudra Patel
+%         Kojo Anyinam-Boateng
+%Emails: rudra.patel@eleves.ec-nantes.fr
+%        kojo.anyinam-boateng@eleves.ec-nantes.fr
+%Version: 1.0
+%Brief: Provides a sampled input for a duration D.
+%-----
+%Last Modified: Tuesday, 8th December 2020 10:39:35 AM
+%Modified By: Kojo Anyinam-Boateng
+%-----
+%Copyright ©2020 Rudra Patel & Kojo Anyinam-Boateng
+%}
 
-t=0:Ts:D;
-f = 1/Delta;
-u = A*(square(2*pi*f*t));
+function u = inputvoltage(D, A, Delta, Ts)
 
+    t = 0:Ts:D;
+    f = 1 / Delta;
+    u = A * (square(2 * pi * f * t));
 
-% plot(t,u)
-% ylabel('Input voltage')
-% xlabel('Time in seconds')
-% title('Input Square wave')
 end
-
-
-
