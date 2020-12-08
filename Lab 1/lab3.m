@@ -59,4 +59,4 @@ figure(2);
 plot(x(1, :), x(2, :), '*');
 hold on
 plot(X(1, :), X(2, :));
-title("Joint Distribution with 91%confidence ellipse");
+title("Joint Distribution with 91% confidence ellipse");

@@ -1,3 +1,20 @@
+%{
+%File: univariateDist.m
+%Project: Autonomous Vehicles Lab | Random Variables
+%File Created: Thursday, 19th November 2020 8:32:56 AM
+%Authors: Rudra Patel
+%         Kojo Anyinam-Boateng
+%Emails: rudra.patel@eleves.ec-nantes.fr
+%        kojo.anyinam-boateng@eleves.ec-nantes.fr
+%Version: 1.0
+%Brief:
+%-----
+%Last Modified: Tuesday, 8th December 2020 12:46:04 PM
+%Modified By: Kojo Anyinam-Boateng
+%-----
+%Copyright ©2020 Rudra Patel & Kojo Anyinam-Boateng
+%}
+
 function univariateDist(Ns)
     n = size(Ns, 1);
     nPlot = n * 2;
@@ -32,14 +49,11 @@ function univariateDist(Ns)
         i1 = (2 * n) - 1 - (2 * (index - 1));
         i2 = (2 * n) - 2 - (2 * (index - 1));
 
-        titl = "Normal Disribution with mean " + gaussian_mean + " and std " + gaussian_std;
-        plotHistNSig(gaussian, gaussian_mean, gaussian_std, '#E1341E', titl, nPlot, (2 * n) - i1, (2 * n) - i2, sigBounds);
+        plotHistNSig(gaussian, gaussian_mean, gaussian_std, '#E1341E', nPlot, (2 * n) - i1, (2 * n) - i2, sigBounds, "Normal Disribution", N);
 
-        titl = "uniform disribution with mean " + uniform_mean + " and std " + uniform_std;
-        plotHistNSig(uniform, uniform_mean, uniform_std, '#FFEC00', titl, nPlot, (4 * n) - i1, (4 * n) - i2, sigBounds);
+        plotHistNSig(uniform, uniform_mean, uniform_std, '#2A5AD5', nPlot, (4 * n) - i1, (4 * n) - i2, sigBounds, "Uniform Disribution", N);
 
-        titl = "Gaussian mixturer disribution with mean " + sym_gaus_mix_mean + " and std " + sym_gaus_mix_std;
-        plotHistNSig(sym_gaus_mix, sym_gaus_mix_mean, sym_gaus_mix_std, '#07BD19', titl, nPlot, (6 * n) - i1, (6 * n) - i2, sigBounds);
+        plotHistNSig(sym_gaus_mix, sym_gaus_mix_mean, sym_gaus_mix_std, '#07BD19', nPlot, (6 * n) - i1, (6 * n) - i2, sigBounds, "Gaussian Mixture Disribution", N);
 
     end
 
