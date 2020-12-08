@@ -15,7 +15,7 @@
 %Copyright ©2020 Rudra Patel & Kojo Anyinam-Boateng
 %}
 
-function [XS] = Stationary_Kalman(y, u, G, T, Ts, L, x1_0, p1_0, q)
+function [XS] = stationarykal(y, u, G, T, Ts, L, x1_0, p1_0, q)
     % This function is used to for stationary kalmann filter
 
     A = [0 1; 0 -1 / T];
